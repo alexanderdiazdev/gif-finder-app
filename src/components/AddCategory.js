@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const AddCategory = ({ setCategories }) => {
 
-    const [inputValue, setInputValue] = useState("Search")
+    const [inputValue, setInputValue] = useState('')
 
     const handleInputChange = ({ target: {value} }) => {
         setInputValue(value)
@@ -23,7 +23,8 @@ const AddCategory = ({ setCategories }) => {
         <form onSubmit = { handleSubmit }>
             <input 
                 type="text"
-                value = { inputValue }
+                value= { inputValue }
+                placeholder= "Add category"
                 onChange = { handleInputChange }
              />
         </form>
